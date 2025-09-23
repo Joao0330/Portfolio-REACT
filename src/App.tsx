@@ -1,9 +1,11 @@
+import { Header } from './components/Header';
+
 function App() {
 	return (
 		<>
-			<div className='container'>
-				<h1>Portfolio</h1>
-			</div>
+			<Header />
+
+			<main></main>
 		</>
 	);
 }
