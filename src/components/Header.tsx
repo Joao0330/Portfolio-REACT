@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { navLinks } from '../data';
 
 export const Header = () => {
 	const [scrolled, setScrolled] = useState(false);
@@ -33,18 +34,11 @@ export const Header = () => {
 
 					<nav className={isMobile ? 'active' : ''}>
 						<ul>
-							<li>
-								<a href='#about'>About Me</a>
-							</li>
-							<li>
-								<a href='#experience'>Experience</a>
-							</li>
-							<li>
-								<a href='#projects'>Projects</a>
-							</li>
-							<li>
-								<a href='#skills'>My Skills</a>
-							</li>
+							{navLinks.map(({ link, title }) => (
+								<li>
+									<a href={link}>{title}</a>
+								</li>
+							))}
 						</ul>
 
 						<div className='navbar__right'>
