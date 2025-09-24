@@ -13,37 +13,90 @@
 		background: black;
 	}
 
-	&__wrapper {
+	&__logo {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		align-items: flex-end;
+		gap: 1.5rem;
 
 		h1 {
 			font-size: 1.5rem;
 			font-weight: 700;
 			color: $text-color;
 			transition: 0.3s;
-
-			&:hover {
-				transform: scale(1.05);
-			}
 		}
 
+		span {
+			display: block;
+			width: 6px;
+			height: 6px;
+			background: $primary-color;
+		}
+
+		&:hover {
+			h1 {
+				transform: scale(1.05);
+			}
+
+			span {
+				animation: logoAnim 1s infinite;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
 		nav {
+			display: flex;
+			align-items: center;
+			gap: 10rem;
 			color: $text-color;
+
+			z-index: 999;
+
+			@include breakpointDesktop(991px) {
+				position: fixed;
+				flex-direction: column;
+				justify-content: center;
+				opacity: 0;
+				height: 100%;
+				width: 0;
+				right: -100%;
+				top: 0;
+				bottom: 0;
+				border-radius: 50% 0 0 50%;
+				background: $background-color;
+				overflow: hidden;
+				transition: right 0.7s, border-radius 1s, width 0.7s, opacity 0.7s;
+			}
+
+			&.active {
+				opacity: 1;
+				right: 0;
+				width: 40%;
+				border-radius: 0;
+			}
 
 			ul {
 				display: flex;
 				gap: 2rem;
 
+				@include breakpointDesktop(991px) {
+					flex-direction: column;
+				}
+
 				li {
 					position: relative;
 					padding: 0.3rem 0;
+					text-align: center;
 
 					&::before {
 						content: '';
 						position: absolute;
 						bottom: 0;
+						left: 0;
 						height: 2px;
 						width: 0;
 						background: $primary-color;
@@ -73,5 +126,57 @@
 		align-items: center;
 		gap: 1.5rem;
 		overflow: hidden;
+	}
+
+	&__hamburger {
+		display: none;
+
+		@include breakpointDesktop(991px) {
+			display: block;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			z-index: 9999;
+			background: transparent;
+
+			span {
+				display: block;
+				width: 25px;
+				height: 2px;
+				margin: 5px auto;
+				background: $primary-color;
+				transition: 0.3s;
+			}
+
+			&:hover {
+				span:nth-child(1) {
+					transform: rotate(10deg);
+				}
+				span:nth-child(2) {
+					transform: rotate(-10deg);
+				}
+			}
+
+			&.active {
+				span:nth-child(1) {
+					transform: translateY(8px) rotate(45deg);
+				}
+				span:nth-child(2) {
+					transform: translateY(1.5px) rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+@keyframes logoAnim {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
