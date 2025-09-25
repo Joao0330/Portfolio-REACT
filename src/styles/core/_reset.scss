@@ -24,9 +24,8 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'JetBrains Mono', monospace;
-	background: rgb(43, 42, 42);
+	/* background: rgb(43, 42, 42) */
 	color: white;
-	min-height: 200vh;
 }
 
 a {
@@ -40,6 +39,10 @@ ul {
 
 img {
 	display: block;
+}
+
+button {
+	font-family: inherit;
 }
 
 main {
