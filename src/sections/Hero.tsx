@@ -2,8 +2,18 @@ import { IoMdDownload } from 'react-icons/io';
 import { HeroStats } from '../components/HeroStats';
 import { heroSocials, heroStats } from '../data';
 import { HeroSocialIcons } from '../components/HeroSocialIcons';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 export const Hero = () => {
+	useGSAP(() => {
+		gsap.fromTo('.hero__left h2', { y: 50, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' });
+
+		gsap.fromTo('.hero__left strong', { opacity: 0 }, { opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' });
+
+		gsap.fromTo('.hero__stats', { x: 50, opacity: 0 }, { x: 0, opacity: 1, stagger: 0.6, duration: 1, delay: 1, ease: 'power2.inOut' });
+	});
+
 	return (
 		<section className='hero'>
 			<div className='container'>
@@ -35,7 +45,6 @@ export const Hero = () => {
 							<HeroStats value={stat.value} title={stat.title} />
 						))}
 					</div>
-					{/* TODO: Add gsap animations, make this section responsive */}
 				</div>
 			</div>
 		</section>
