@@ -35,14 +35,14 @@ export const Hero = () => {
 							</button>
 
 							{heroSocials.map(item => (
-								<HeroSocialIcons icon={item.icon} link={item.link} tooltip={item.tooltip} />
+								<HeroSocialIcons key={item.id} icon={item.icon} link={item.link} tooltip={item.tooltip} />
 							))}
 						</div>
 					</div>
 
 					<div className='hero__stats'>
 						{heroStats.map(stat => (
-							<HeroStats value={stat.value} title={stat.title} />
+							<HeroStats key={stat.title} value={stat.value} title={stat.title} />
 						))}
 					</div>
 				</div>

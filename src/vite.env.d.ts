@@ -9,6 +9,7 @@ interface HeroStats {
 }
 
 interface HeroSocials {
+	id?: number;
 	icon: string;
 	tooltip: string;
 	link: string;

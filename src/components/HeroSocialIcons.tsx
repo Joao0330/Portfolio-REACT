@@ -13,13 +13,11 @@ export const HeroSocialIcons = ({ icon, tooltip, link }: HeroSocials) => {
 	}
 
 	return (
-		<>
-			<div>
-				<a href={link} target='_blank'>
-					{iconLogo}
-				</a>
-				<span className='hero-tooltip'>{tooltip}</span>
-			</div>
-		</>
+		<div>
+			<a href={link} target='_blank'>
+				{iconLogo}
+			</a>
+			<span className='hero-tooltip'>{tooltip}</span>
+		</div>
 	);
 };

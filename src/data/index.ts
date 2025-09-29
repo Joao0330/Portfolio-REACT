@@ -34,11 +34,13 @@ export const heroStats: HeroStats[] = [
 
 export const heroSocials: HeroSocials[] = [
 	{
+		id: 1,
 		icon: 'FaGithub',
 		tooltip: 'GitHub',
 		link: 'https://github.com/Joao0330',
 	},
 	{
+		id: 2,
 		icon: 'FaLinkedinIn',
 		tooltip: 'LinkedIn',
 		link: 'https://www.linkedin.com/in/jg-rodrigues/',

@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { Hero } from './sections/Hero';
+import { Profile } from './sections/Profile';
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 
 			<main>
 				<Hero />
+				<Profile />
 			</main>
 		</>
 	);
