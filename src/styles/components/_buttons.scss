@@ -56,4 +56,9 @@
 		background: $primary-color;
 		color: $background-color;
 	}
+
+	@include breakpointDesktop(600px) {
+		font-size: 1rem;
+		padding: 1rem 1rem;
+	}
 }

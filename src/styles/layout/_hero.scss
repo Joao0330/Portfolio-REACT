@@ -4,10 +4,21 @@
 	padding: 10rem 0 8rem;
 	background-color: $background-color;
 	background-image: url('/images/bg.png');
+	overflow: hidden;
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include breakpointDesktop(768px) {
+			flex-direction: column;
+			gap: 5rem;
+		}
+
+		@include breakpointDesktop(600px) {
+			justify-content: center;
+			text-align: center;
+		}
 	}
 
 	&__left {
@@ -16,12 +27,29 @@
 		gap: 1rem;
 		width: 50%;
 
+		@include breakpointDesktop(991px) {
+			width: 80%;
+		}
+
+		@include breakpointDesktop(768px) {
+			width: 100%;
+		}
+
+		@include breakpointDesktop(600px) {
+			gap: 2rem;
+			align-items: center;
+		}
+
 		strong {
 			font-size: 1.2rem;
 		}
 
 		h2 {
 			font-size: 4.5rem;
+
+			@include breakpointDesktop(600px) {
+				font-size: 3.5rem;
+			}
 		}
 
 		h2:nth-child(2),
@@ -88,6 +116,18 @@
 				color: $primary-color;
 				font-size: 2.5rem;
 			}
+		}
+
+		@include breakpointDesktop(768px) {
+			width: 100%;
+			flex-direction: row;
+			text-align: center;
+			justify-content: space-between;
+		}
+
+		@include breakpointDesktop(600px) {
+			flex-direction: column;
+			gap: 3rem;
 		}
 	}
 }

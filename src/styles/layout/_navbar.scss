@@ -42,6 +42,12 @@
 				animation: logoAnim 1s infinite;
 			}
 		}
+
+		@include breakpointDesktop(991px) {
+			span {
+				animation: logoAnim 1s infinite;
+			}
+		}
 	}
 
 	&__wrapper {
@@ -147,15 +153,6 @@
 				margin: 5px auto;
 				background: $primary-color;
 				transition: 0.3s;
-			}
-
-			&:hover {
-				span:nth-child(1) {
-					transform: rotate(10deg);
-				}
-				span:nth-child(2) {
-					transform: rotate(-10deg);
-				}
 			}
 
 			&.active {
