@@ -14,3 +14,18 @@ interface HeroSocials {
 	tooltip: string;
 	link: string;
 }
+
+interface TechItems {
+	image: string;
+	name: string;
+}
+
+interface Project {
+	imgPath: string;
+	title: string;
+	description: string;
+	extraInfo: string | null;
+	projectLink: string | null;
+	techStack: TechItems[];
+	githubLink: string;
+}

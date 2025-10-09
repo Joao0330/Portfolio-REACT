@@ -49,7 +49,7 @@ export const Profile = () => {
 	}, []);
 
 	return (
-		<section className='profile'>
+		<section className='profile' id='about'>
 			<div className='container'>
 				<h3>Profile</h3>
 
