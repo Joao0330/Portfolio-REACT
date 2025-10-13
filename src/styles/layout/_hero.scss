@@ -67,8 +67,18 @@
 			align-items: center;
 			gap: 1.5rem;
 
+			@include breakpointDesktop(600px) {
+				flex-direction: column;
+				gap: 2.5rem;
+			}
+
 			div {
 				position: relative;
+
+				@include breakpointDesktop(991px) {
+					display: flex;
+					align-items: center;
+				}
 
 				a {
 					display: flex;
@@ -100,6 +110,16 @@
 				padding: 0.5rem;
 				font-size: 0.8rem;
 				transition: 0.3s;
+
+				@include breakpointDesktop(991px) {
+					opacity: 1;
+					position: relative;
+					inset: 0;
+					background: transparent;
+					color: $primary-color;
+					font-size: 0.9rem;
+					font-weight: 600;
+				}
 			}
 		}
 	}
