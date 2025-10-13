@@ -28,8 +28,6 @@
 	&__card {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
-		padding: 2rem;
 		border-radius: 18px;
 		border: 1px solid $border-color;
 		box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.75);
@@ -38,17 +36,37 @@
 			padding: 0.8rem;
 		}
 
-		img {
+		> img {
 			object-fit: cover;
 			object-position: top;
 			height: 300px;
-			border-radius: 18px;
+			border-radius: 18px 18px 0 0;
+			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.479);
 		}
 
 		> div:nth-of-type(1) {
 			display: flex;
 			flex-direction: column;
 			gap: 2rem;
+			padding: 2rem;
+			height: 300px;
+			overflow-y: scroll;
+			border-bottom: 1px solid $border-color;
+
+			// Custom Scrollbar
+			&::-webkit-scrollbar {
+				width: 8px;
+				background: $card-background-color;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: $text-color;
+				border-radius: 8px;
+			}
+
+			&::-webkit-scrollbar-corner {
+				background: $background-color;
+			}
 
 			@include breakpointDesktop(600px) {
 				text-align: center;
@@ -79,14 +97,14 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			height: 100%;
+			height: 50%;
 			gap: 4rem;
+			padding: 2rem;
 
 			> div:nth-child(1) {
 				display: flex;
 				justify-content: center;
 				flex-wrap: wrap;
-				height: 100%;
 				gap: 2rem;
 
 				@include breakpointDesktop(400px) {
@@ -102,11 +120,6 @@
 					border-radius: 28px;
 					transition: 0.3s;
 
-					&:hover {
-						background: #66666623;
-						transform: scale(1.1);
-					}
-
 					img {
 						width: 30px;
 						height: 30px;
@@ -116,14 +129,10 @@
 
 			> div:nth-child(2) {
 				display: flex;
+				flex-direction: column;
 				justify-content: space-between;
 				align-items: center;
 				gap: 2rem;
-
-				@include breakpointDesktop(768px) {
-					flex-direction: column;
-					gap: 2rem;
-				}
 
 				a {
 					display: flex;

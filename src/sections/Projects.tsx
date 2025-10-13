@@ -13,7 +13,7 @@ export const Projects = () => {
 	useGSAP(() => {
 		const cards = gsap.utils.toArray('.projects__card');
 
-		cards.forEach(card => {
+		cards.forEach((card, index) => {
 			gsap.fromTo(
 				card as HTMLElement,
 				{ y: 50, opacity: 0 },
@@ -21,6 +21,7 @@ export const Projects = () => {
 					y: 0,
 					opacity: 1,
 					duration: 0.8,
+					delay: index * 0.1,
 					scrollTrigger: {
 						trigger: card as HTMLElement,
 						start: 'top bottom-=100',

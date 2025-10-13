@@ -57,10 +57,11 @@
 
 		nav {
 			display: flex;
+			justify-content: space-between;
 			align-items: center;
 			gap: 10rem;
 			color: $text-color;
-
+			width: 60%;
 			z-index: 999;
 
 			@include breakpointDesktop(991px) {
