@@ -16,9 +16,13 @@
 
 	&__wrapper {
 		display: grid;
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		gap: 4rem;
+
+		@include breakpointDesktop(991px) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__card {
@@ -29,20 +33,9 @@
 		border-radius: 18px;
 		border: 1px solid $border-color;
 		box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.75);
-		transition: 0.3s;
 
 		@include breakpointDesktop(400px) {
 			padding: 0.8rem;
-		}
-
-		&:hover {
-			box-shadow: 0px 0px 14px 0px rgba(52, 107, 36, 0.75);
-			transform: translateY(-7px);
-
-			@include breakpointDesktop(991px) {
-				box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.75);
-				transform: translateY(0);
-			}
 		}
 
 		img {

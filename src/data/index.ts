@@ -8,10 +8,6 @@ export const navLinks: NavLink[] = [
 		link: '#projects',
 	},
 	{
-		title: 'Experience',
-		link: '#experience',
-	},
-	{
 		title: 'My Skills',
 		link: '#skills',
 	},
@@ -204,5 +200,80 @@ export const projects: Project[] = [
 			},
 		],
 		githubLink: 'https://github.com/Joao0330/ecommerce-project-technexus',
+	},
+];
+
+export const skillsCategories: SkillsCategories[] = [
+	{
+		category: 'frontend',
+		skills: [
+			{
+				name: 'HTML5',
+				icon: '/images/icons/html.svg',
+			},
+			{
+				name: 'JavaScript',
+				icon: '/images/icons/javascript.svg',
+			},
+			{
+				name: 'TypeScript',
+				icon: '/images/icons/typescript.svg',
+			},
+			{
+				name: 'React',
+				icon: '/images/icons/react.svg',
+			},
+			{
+				name: 'CSS',
+				icon: '/images/icons/css.svg',
+			},
+			{
+				name: 'Sass',
+				icon: '/images/icons/sass.svg',
+			},
+			{
+				name: 'Tailwind CSS',
+				icon: '/images/icons/tailwindcss.svg',
+			},
+		],
+	},
+	{
+		category: 'backend',
+		skills: [
+			{
+				name: 'Node.Js',
+				icon: '/images/icons/nodejs.svg',
+			},
+			{
+				name: 'Fastify',
+				icon: '/images/icons/fastify.svg',
+			},
+		],
+	},
+	{
+		category: 'database',
+		skills: [
+			{
+				name: 'MySQL',
+				icon: '/images/icons/mysql.svg',
+			},
+			{
+				name: 'PostgreSQL',
+				icon: '/images/icons/postgresql.svg',
+			},
+			{
+				name: 'Prisma',
+				icon: '/images/icons/prisma.svg',
+			},
+		],
+	},
+	{
+		category: 'tools',
+		skills: [
+			{
+				name: 'Git',
+				icon: '/images/icons/git.svg',
+			},
+		],
 	},
 ];

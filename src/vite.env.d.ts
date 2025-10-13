@@ -29,3 +29,13 @@ interface Project {
 	techStack: TechItems[];
 	githubLink: string;
 }
+
+interface SkillsItem {
+	name: string;
+	icon: string;
+}
+
+interface SkillsCategories {
+	category: string;
+	skills: SkillsItem[];
+}
