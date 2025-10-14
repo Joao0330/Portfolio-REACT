@@ -9,6 +9,10 @@
 		font-size: 2.7rem;
 		margin-bottom: 4rem;
 
+		@include breakpointDesktop(600px) {
+			font-size: 2rem;
+		}
+
 		span {
 			color: $primary-color;
 		}

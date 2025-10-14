@@ -1,0 +1,167 @@
+@use '../abstracts/' as *;
+
+.contact {
+	background: $background-color;
+	padding: 5rem 0;
+
+	h3 {
+		text-align: center;
+		font-size: 2.7rem;
+		margin-bottom: 4rem;
+
+		@include breakpointDesktop(600px) {
+			font-size: 2rem;
+		}
+
+		span {
+			color: $primary-color;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		gap: 1rem;
+
+		@include breakpointDesktop(768px) {
+			width: 100%;
+		}
+
+		label {
+			color: $text-color;
+		}
+
+		input {
+			font-family: 'JetBrains Mono', monospace;
+			background: $card-background-color;
+			border: 1px solid $border-color;
+			color: $text-color;
+			padding: 0.8rem;
+			border-radius: 0.5rem;
+			outline: none;
+
+			&::placeholder {
+				color: #4e646d;
+			}
+		}
+
+		textarea {
+			background: $card-background-color;
+			border: 1px solid $border-color;
+			color: $text-color;
+			font-family: 'JetBrains Mono', monospace;
+			padding: 0.8rem;
+			border-radius: 0.5rem;
+			outline: none;
+			resize: none;
+			min-height: 150px;
+
+			&::placeholder {
+				color: #4e646d;
+			}
+		}
+	}
+
+	&__form-top {
+		display: flex;
+		gap: 1rem;
+
+		@include breakpointDesktop(600px) {
+			flex-direction: column;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+			gap: 0.4rem;
+			height: 120px;
+
+			@include breakpointDesktop(600px) {
+				width: 100%;
+			}
+
+			span {
+				font-size: 0.9rem;
+				color: rgb(177, 83, 83);
+			}
+		}
+	}
+
+	&__form-message {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		height: 250px;
+
+		span {
+			font-size: 0.9rem;
+			color: rgb(177, 83, 83);
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		gap: 1rem;
+		margin-top: 5rem;
+		text-align: center;
+		color: $text-color;
+		background: $card-background-color;
+		padding: 2rem 1rem;
+		border-radius: 15px;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.411);
+
+		@include breakpointDesktop(600px) {
+			gap: 2rem;
+		}
+
+		&:hover {
+			> svg {
+				animation: rotate 0.7s;
+			}
+		}
+
+		> svg {
+			color: $primary-color;
+			font-size: 2rem;
+		}
+
+		h4 {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@keyframes upAndDown {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
