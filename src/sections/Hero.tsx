@@ -6,6 +6,17 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 export const Hero = () => {
+	const handleDownload = () => {
+		const fileUrl = '/CV_Joao_Rodrigues.pdf';
+
+		const link = document.createElement('a');
+		link.href = fileUrl;
+		link.download = 'JoaoRodriguesCV.pdf';
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 	useGSAP(() => {
 		gsap.fromTo('.hero__left h2', { y: 50, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: 'power2.inOut' });
 
@@ -29,7 +40,7 @@ export const Hero = () => {
 						<p>Web Developer | Frontend React Developer</p>
 
 						<div className='hero__left-socials'>
-							<button className='downloadCv-btn'>
+							<button className='downloadCv-btn' onClick={handleDownload}>
 								<span>Download CV</span>
 								<IoMdDownload />
 							</button>

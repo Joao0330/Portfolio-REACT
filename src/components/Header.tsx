@@ -36,7 +36,9 @@ export const Header = () => {
 						<ul>
 							{navLinks.map(({ link, title }) => (
 								<li>
-									<a href={link}>{title}</a>
+									<a href={link} onClick={() => setIsMobile(false)}>
+										{title}
+									</a>
 								</li>
 							))}
 						</ul>
