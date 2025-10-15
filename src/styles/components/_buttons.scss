@@ -82,7 +82,7 @@
 	}
 
 	&:hover {
-		background: darken($primary-color, 10%);
+		background: #43a843;
 
 		svg {
 			animation: upAndDown 0.5s;
@@ -121,7 +121,7 @@
 	}
 
 	&:hover {
-		color: lighten($color: $primary-color, $amount: 10%);
+		color: #83e283;
 	}
 
 	svg {

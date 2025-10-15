@@ -1,3 +1,4 @@
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Contact } from './sections/Contact';
 import { Hero } from './sections/Hero';
@@ -17,6 +18,8 @@ function App() {
 				<Skills />
 				<Contact />
 			</main>
+
+			<Footer />
 		</>
 	);
 }

@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.footer {
+	padding: 4rem 0;
+	background: $card-background-color;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		gap: 5rem;
+		font-size: 0.9rem;
+
+		@include breakpointDesktop(768px) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 1rem;
+		}
+
+		strong {
+			color: $primary-color;
+		}
+
+		p {
+			color: $text-color;
+		}
+	}
+}
