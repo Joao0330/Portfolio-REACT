@@ -16,7 +16,7 @@ export const navLinks: NavLink[] = [
 export const heroStats: HeroStats[] = [
 	{
 		title: 'Age',
-		value: '21',
+		value: '22',
 	},
 	{
 		title: 'Years of Experience',
