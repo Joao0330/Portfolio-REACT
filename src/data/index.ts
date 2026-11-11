@@ -16,11 +16,11 @@ export const navLinks: NavLink[] = [
 export const heroStats: HeroStats[] = [
 	{
 		title: 'Age',
-		value: '22',
+		value: '23',
 	},
 	{
 		title: 'Years of Experience',
-		value: '2+',
+		value: '3',
 	},
 	{
 		title: 'Projects Worked on',
